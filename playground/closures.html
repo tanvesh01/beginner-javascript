@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title></title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+    <body>
+        <script>
+            function outer() {
+                const outerVar = "Outer var";
+                function inner() {
+                    const innerVar = "Inner var";
+                    console.log(outerVar);
+                    console.log(innerVar);
+                }
+                return inner;
+            }
 
-<body>
-
-</body>
-
+            const innerFunction = outer();
+        </script>
+    </body>
 </html>
